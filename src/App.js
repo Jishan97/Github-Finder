@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect,useState } from 'react';
 import Navbar from './components/layout/Navbar';
 
 
 import Alert from './components/layout/Alert';
-import {BrowserRouter as Router, Switch , Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch ,useLocation ,Route} from 'react-router-dom'
 import GithubState from './context/github/GithubState'
 import AlertState from './context/alert/AlertState'
 
@@ -16,7 +16,17 @@ import Home from './components/pages/Home'
 import NotFound from './components/pages/Notfound'
 
 const App = ()=>  {
-   return(
+
+const [EndPoint,setEndPoint] = useState(null);
+
+  useEffect(()=>{
+    // get the url path
+  
+    
+  },[])
+
+   
+    return(
      <GithubState>
        <AlertState>
      <Router>
